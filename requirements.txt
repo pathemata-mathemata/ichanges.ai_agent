@@ -1,0 +1,8 @@
+# requirements.txt for Autoclass AI Agent
+
+fastapi
+uvicorn[standard]
+requests
+sqlalchemy
+psycopg2-binary
+python-dotenv
