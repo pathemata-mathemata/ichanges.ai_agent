@@ -1,0 +1,40 @@
+/* styles/globals.css */
+
+/* 1. Tailwind’s layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Reset default margins/padding & set base font */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+/* 3. Page background & text color */
+body {
+  background-color: #f3f4f6; /* Tailwind gray-100 */
+  color: #1f2937;            /* Tailwind gray-800/900 */
+}
+
+/* 4. Ensure Vanta’s canvas always sits behind content */
+.vanta-canvas {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+/* 5. Smooth focus outlines */
+:focus {
+  outline: none;
+}
+:focus-visible {
+  outline: 2px solid #2563eb; /* Tailwind blue-600 */
+  outline-offset: 2px;
+}
