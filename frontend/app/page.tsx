@@ -10,6 +10,7 @@ import TargetMajorInput       from '../components/TargetMajorInput'
 import TargetYearInput        from '../components/TargetYearInput'
 import WaitingOverlay         from '../components/WaitingOverlay'
 import ChatBoxPlaceholder     from '../components/ChatBoxPlaceholder'
+import TransferRequirements   from '../components/TransferRequirements'
 
 type FormValues = {
   courses:                string
@@ -199,6 +200,18 @@ export default function Page() {
             </table>
 
             <div className="mt-4">
+              <h3 className="text-xl font-bold mb-4">Transfer Requirements</h3>
+              <p className="text-sm text-gray-600 mb-4">
+                See what courses you need to complete for your target institution and major.
+              </p>
+              <TransferRequirements
+                sourceInstitution={methods.watch('originInstitution')}
+                targetInstitution={methods.watch('targetInstitution')}
+                targetMajor={methods.watch('targetMajor')}
+              />
+            </div>
+
+            <div className="mt-6">
               <ChatBoxPlaceholder />
             </div>
           </div>
